@@ -1,0 +1,1 @@
+ i like bitcoins (baptizing coins). Also you don't know anything about mining algorithms ? There's something going down, because nobody ever actually buys this kind in BTC and its no fun ! Quote: In Bitcoin itself , they offer up some things such as free service : the BitMEX for newbie customers which includes everything on an equal scale
