@@ -1,0 +1,25 @@
+ Sure, I can help you with that! Here's some code in Python that uses the `Rockstar` library to check the value of Bitcoin every five seconds and save the result to a text file:
+
+```python
+import rockstar
+from datetime import datetime
+
+rock = rockstar.Rock()
+
+# Set("bitcoin_value", "10") # Set the value of Bitcoin to 10
+
+ start_time = datetime.now().replace(minute=5) # Get the current time in minutes (5 seconds)
+
+ while True:
+ if rock.get("current_block_hash"): # Check if there is a new block hash
+ value = rock.get("current_block_hash") # Get the hash of the latest block
+ rock.set("bitcoin_value", str(value)) # Set the value of Bitcoin to the hash
+ with open("bitcoin_value.txt", "w") as f: # Save the value to a text file
+ f.write(str(value)) # Write the value to the file
+ break # Break out of the loop after checking for new block hashes
+
+```
+
+In this code, we first import the `Rockstar` library and create an instance called `rock`. We then set the value of Bitcoin to 10 using the `Set()` function. Next, we use the `start_time` variable to get the current time in minutes (5 seconds) and check if there is a new block hash. If there is, we retrieve the hash of the latest block using the `get()` method and set the value of Bitcoin to the hash using the `set()` function. Finally, we use the `with` statement to write the value to a text file called "bitcoin_value.txt" in writing mode (`w`). 
+
+I hope this helps! Let me know if you have any questions or need further assistance.
