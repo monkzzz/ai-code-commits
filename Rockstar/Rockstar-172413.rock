@@ -1,0 +1,24 @@
+ Sure, I can help you with that! Here's some code in Rockstar that will do what you're asking for:
+
+```rockstar
+1. Set up a variable to hold the current value of Bitcoin:
+```
+bitcoin = 0.0005
+2. Create a new file called "bitcoin_value.txt" and write some text to it:
+```
+createFile("bitcoin_value.txt", "This is the value of Bitcoin.")
+3. Write a loop that checks the current value of Bitcoin every 5 seconds:
+```
+while true do
+ readLine() # use `readLine()` to get the latest value from the network
+ if (getBitcoin() > 0.001) then
+ writeFile("bitcoin_value.txt", "The current value of Bitcoin is: $"..getBitcoin())
+ endif
+endwhile
+```
+4. Save this code to a Rockstar file and run it:
+```rockstar
+savefile("check_bitcoin.rock")
+run() # use `run()` to start the program
+```
+This will check the value of Bitcoin every 5 seconds and store it inside a text file called "bitcoin_value.txt".
