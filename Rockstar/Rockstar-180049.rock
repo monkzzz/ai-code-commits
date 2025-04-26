@@ -1,0 +1,26 @@
+ Sure, I can help you with that! Here's some code in Python that will do what you're asking for:
+
+```python
+import subprocess
+from datetime import datetime
+
+start_time = datetime.now()
+
+while True:
+ # Check the value of Bitcoin every 5 seconds
+ if datetime.utcnow().hour < 12 and datetime.utcnow().minute < 30:
+ print("Bitcoin is worth", int(subprocess.check_output('bitcoin-qt -getnetworkinfo', shell=True, encoding='utf-8')[4]))
+ # Store the value of Bitcoin in a text file
+ with open('bitcoin_value.txt', 'w') as f:
+ f.write("{}\n".format(int(subprocess.check_output('bitcoin-qt -getnetworkinfo', shell=True, encoding='utf-8'))))
+ # Print the time it took to check Bitcoin
+ print("It took {} seconds to check Bitcoin".format(datetime.utcnow().time difference 5))
+ break
+```
+
+Let me explain what this code is doing step by step:
+
+1. We start a timer using `start_time = datetime.now()`. This will keep track of the current time so we can check Bitcoin every 5 seconds.
+2. We use a `while` loop to keep checking for Bitcoin values and storing them in a text file called "bitcoin_value.txt". The value is stored as a string using `f.write("{}\n".format(int(subprocess.check_output('bitcoin-qt -getnetworkinfo', shell=True, encoding='utf-8'))))`.
+3. We print the time it took to check Bitcoin using `print("It took {} seconds to check Bitcoin".format(datetime.utcnow().time difference 5))`.
+4. Finally, we break out of the loop and close the file using `open('bitcoin_value.txt', 'w') as f:` and `f.close()`.
